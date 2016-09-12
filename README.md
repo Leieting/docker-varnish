@@ -1,7 +1,7 @@
 # Varnish Docker container
 
-> Centos 7  
-> Varnish 4.x
+> Alpine Linux 3.4
+> Varnish 4.1.2
 
 ## Usage
 
@@ -12,7 +12,7 @@ docker run -d \
   --link web-app:backend-host \
   --volumes-from web-app \
   --env 'VCL_CONFIG=/data/path/to/varnish.vcl' \
-  million12/varnish
+  leieting/varnish
 ```
 
 In the above example we assume that:
@@ -40,7 +40,6 @@ You can configure Varnish daemon by following env variables:
 
 * Marcin Ryzycki (<marcin@m12.io>)  
 * Przemyslaw Ozgo (<linux@ozgo.info>)
+* Thomas Sunde Nielsen (thomas@leieting.no)
 
----
-
-**Sponsored by** [Typostrap.io - the new prototyping tool](http://typostrap.io/) for building highly-interactive prototypes of your website or web app. Built on top of TYPO3 Neos CMS and Zurb Foundation framework.
+Forked from [million12/docker-varnish](https://github.com/million12/docker-varnish)
