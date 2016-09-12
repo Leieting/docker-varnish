@@ -13,7 +13,7 @@ docker run -d \
   --link web-app:backend-host \
   --volumes-from web-app \
   --env 'VCL_CONFIG=/data/path/to/varnish.vcl' \
-  leieting/varnish
+  leieting/varnish-base
 ```
 
 In the above example we assume that:
