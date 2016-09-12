@@ -1,11 +1,9 @@
-FROM centos:centos7
-MAINTAINER Przemyslaw Ozgo linux@ozgo.info, Marcin Ryzycki marcin@m12.io
+FROM alpine:3.4
+MAINTAINER Thomas S. Nielsen <thomas@leieting.no>
 
-RUN yum update -y && \
-  yum install -y epel-release && \
-  yum install -y varnish && \
-  yum install -y libmhash-devel && \
-  yum clean all
+RUN apk update && \
+    apk upgrade && \
+    apk add varnish
 
 ADD start.sh /start.sh
 
