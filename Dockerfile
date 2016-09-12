@@ -5,7 +5,7 @@ RUN apk update && \
     apk upgrade && \
     apk add varnish
 
-ADD start.sh /start.sh
+COPY start.sh /start.sh
 
 ENV VCL_CONFIG      /etc/varnish/default.vcl
 ENV CACHE_SIZE      64m
